@@ -1,0 +1,3 @@
+[submodule "jellyscan/Slitscan"]
+	path = jellyscan/Slitscan
+	url = https://github.com/natronics/Slitscan.git
