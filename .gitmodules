@@ -1,6 +1,3 @@
-[submodule "jellyscan/Slitscan"]
-	path = jellyscan/Slitscan
-	url = https://github.com/natronics/Slitscan.git
 [submodule "_layouts"]
 	path = _layouts
 	url = https://github.com/natronics/jekyll-layouts.git
