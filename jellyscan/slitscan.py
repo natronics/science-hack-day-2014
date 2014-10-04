@@ -7,7 +7,7 @@ from PIL import Image
 
 project_directory = "./"
 input_directory = "frames/"
-output_directory = "output/"
+output_directory = "images/"
 SLIT = 300
 
 
@@ -29,4 +29,4 @@ for i, image in enumerate(input_file_list):
     paste = (i, 0, i+1, height-1)
     output_im.paste(line, paste)
 
-output_im.save(project_directory+output_directory+"output.jpg","JPEG")
+output_im.save(project_directory+output_directory+"slitscan.png","PNG")
