@@ -7,11 +7,32 @@ title: LCH Map
 
 <p>
  How big is the <a href="">Large Hadron Collider</a>? Move the map around to put
- an LHC sized circle around your hometown.
+ an LHC sized circle around your hometown. Compare other colliders to see how
+ they size up.
 </p>
 
 
 <div id="map" class="col-sm-12" style="height:550px;"></div>
+
+<form class="form-inline" role="form">
+  <div class="radio col-sm-1">
+    <label>
+      <input type="radio" name="collider" onclick="lhc.setRadius(4300);"checked><strong>LHC</strong>
+    </label>
+  </div>
+  <div class="radio col-sm-3">
+    <label>
+      <input type="radio" name="collider" onclick="lhc.setRadius(1000);">Tevatron (Fermilab, Illinois)
+    </label>
+  </div>
+  <div class="radio col-sm-6">
+    <label>
+      <input type="radio" name="collider" onclick="lhc.setRadius(12700);">Very Large Hadron Collider/Future Circular Collider (proposed, CERN, Geneva, Switzerland)
+    </label>
+  </div>
+
+</form>
+
 
 <link href="css/leaflet.css" rel="stylesheet">
 <link href="js/search/src/css/l.geosearch.css" rel="stylesheet">
