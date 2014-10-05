@@ -21,8 +21,8 @@ title: LCH Map
 <script>
     // create a map in the "map" div, set the view to a given place and zoom
     var map = L.map('map', {
-        maxZoom: 12,
-        center: [51.505, -0.09],
+        maxZoom: 13,
+        center: [46.2751, 6.075],
         zoom: 12,
     });
 
@@ -31,7 +31,7 @@ title: LCH Map
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    lhc = L.circle([51.505, -0.09], 4500).addTo(map);
+    lhc = L.circle([46.2751, 6.075], 4500, { color: '#c02942'}).addTo(map);
 
     new L.Control.GeoSearch({
             provider: new L.GeoSearch.Provider.Google()
