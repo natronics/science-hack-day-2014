@@ -8,17 +8,15 @@ from PIL import Image
 project_directory = "./"
 input_directory = "frames/"
 output_directory = "images/"
-SLIT = 300
 
 
 input_file_list = sorted(glob.glob(project_directory+input_directory+"*.png"))
 n_image = len(input_file_list)
 
-
 input_im = Image.open(input_file_list[0])
 width, height = input_im.size
 output_im = Image.new(mode='RGB',size=(n_image, height))
-
+SLIT = int(width/2)
 
 for i, image in enumerate(input_file_list):
     print(i, image)
@@ -29,4 +27,4 @@ for i, image in enumerate(input_file_list):
     paste = (i, 0, i+1, height-1)
     output_im.paste(line, paste)
 
-output_im.save(project_directory+output_directory+"slitscan.png","PNG")
+output_im.save(project_directory+output_directory+"slitscan_output.png","PNG")

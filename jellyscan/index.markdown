@@ -35,3 +35,18 @@ pixels and paste them into a new image. This stacked up to create a "slitscan":
 The x-axis (pixel number) of the output image is time! You can see swirling from
 the jelly movement show up as "warping" of the suspended particles (little white
 dots) in the slitscan.
+
+## Second Try
+
+I combined all these scripts so you can
+
+    $ make run VID=YOUTUBE_URL
+
+and it will make a slitscan (with the slit in the center of the frame.
+
+So [this video](https://www.youtube.com/watch?v=3_oMQZuznyc) gives this scan:
+
+<a href="images/slitscan_tank.png"><img src="images/slitscan_tank.png" class="img-responsive"></a>
+
+
+
