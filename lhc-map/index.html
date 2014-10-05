@@ -5,15 +5,26 @@ title: LCH Map
 
 <h1>LCH In Your Neighborhood</h1>
 
+<p>
+ How big is the <a href="">Large Hadron Collider</a>? Move the map around to put
+ an LHC sized circle around your hometown.
+</p>
+
+
 <div id="map" class="col-sm-12" style="height:550px;"></div>
 
 <link href="css/leaflet.css" rel="stylesheet">
+<link href="js/search/src/css/l.geosearch.css" rel="stylesheet">
 <script src="js/leaflet.js"></script>
 <script src="js/search/src/js/l.control.geosearch.js"></script>
 <script src="js/search/src/js/l.geosearch.provider.google.js"></script>
 <script>
     // create a map in the "map" div, set the view to a given place and zoom
-    var map = L.map('map').setView([51.505, -0.09], 12);
+    var map = L.map('map', {
+        maxZoom: 12,
+        center: [51.505, -0.09],
+        zoom: 12,
+    });
 
     // add an OpenStreetMap tile layer
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -22,6 +33,9 @@ title: LCH Map
 
     lhc = L.circle([51.505, -0.09], 4500).addTo(map);
 
+    new L.Control.GeoSearch({
+            provider: new L.GeoSearch.Provider.Google()
+        }).addTo(map);
 
     map.on('moveend', function (e) {
         lhc.setLatLng(map.getCenter());
