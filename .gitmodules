@@ -1,3 +1,6 @@
 [submodule "_layouts"]
 	path = _layouts
 	url = https://github.com/natronics/jekyll-layouts.git
+[submodule "lhc-map/js/search"]
+	path = lhc-map/js/search
+	url = https://github.com/smeijer/L.GeoSearch.git

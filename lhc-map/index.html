@@ -1,0 +1,29 @@
+---
+layout: article
+title: LCH Map
+---
+
+<h1>LCH In Your Neighborhood</h1>
+
+<div id="map" class="col-sm-12" style="height:550px;"></div>
+
+<link href="css/leaflet.css" rel="stylesheet">
+<script src="js/leaflet.js"></script>
+<script src="js/search/src/js/l.control.geosearch.js"></script>
+<script src="js/search/src/js/l.geosearch.provider.google.js"></script>
+<script>
+    // create a map in the "map" div, set the view to a given place and zoom
+    var map = L.map('map').setView([51.505, -0.09], 12);
+
+    // add an OpenStreetMap tile layer
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    lhc = L.circle([51.505, -0.09], 4500).addTo(map);
+
+
+    map.on('moveend', function (e) {
+        lhc.setLatLng(map.getCenter());
+    });
+</script>
