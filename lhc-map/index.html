@@ -11,21 +11,21 @@ title: LHC Map
  other colliders to see how they size up.
 </p>
 
+<style>img { max-height: none; }</style>
+<div id="map" style="height:550px;"></div>
 
-<div id="map" class="col-sm-12" style="height:550px;"></div>
-
-<form class="form-inline" role="form">
-  <div class="radio col-sm-3">
+<form class="columns" role="form">
+  <div class="column">
     <label>
       <input type="radio" name="collider" onclick="lhc.setRadius(4300);"checked><strong>LHC (Geneva, Switzerland)</strong>
     </label>
   </div>
-  <div class="radio col-sm-3">
+  <div class="column">
     <label>
       <input type="radio" name="collider" onclick="lhc.setRadius(1000);">Tevatron (Fermilab, Illinois)
     </label>
   </div>
-  <div class="radio col-sm-6">
+  <div class="column">
     <label>
       <input type="radio" name="collider" onclick="lhc.setRadius(12700);">Very Large Hadron Collider/Future Circular Collider (proposed, CERN, Geneva, Switzerland)
     </label>
